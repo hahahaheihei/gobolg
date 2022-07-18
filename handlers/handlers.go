@@ -22,7 +22,7 @@ func InitHandlers(){
 	// r.Use(middleware.Log())
 	r.Use(gin.Recovery())
 	r.Use()
-	// r.Use(middleware.Cors())
+	r.Use(middleware.Cors())
 
 	r.Static("/static","./web/front/dist/static")
 	r.Static("/admin/","./web/admin/dist")
